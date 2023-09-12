@@ -27,7 +27,7 @@ Running JPetStore sample under Tomcat (using the [cargo-maven2-plugin](https://c
 - Clone this repository
 
   ```
-  $ git clone https://github.com/mybatis/jpetstore-6.git
+  $ git clone https://github.com/chaudharysurya14/jPetStore_CICD_Project.git
   ```
 
 - Build war file
