@@ -34,7 +34,7 @@ Running JPetStore sample under Tomcat (using the [cargo-maven2-plugin](https://c
 
   ```
   $ cd jPetStore_CICD_Project
-  $ ./mvnw clean package
+  $ mvn clean package
   ```
 
 - Startup the Tomcat server and deploy web application
