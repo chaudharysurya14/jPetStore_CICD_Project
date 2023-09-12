@@ -33,7 +33,7 @@ Running JPetStore sample under Tomcat (using the [cargo-maven2-plugin](https://c
 - Build war file
 
   ```
-  $ cd jpetstore-6
+  $ cd jPetStore_CICD_Project
   $ ./mvnw clean package
   ```
 
