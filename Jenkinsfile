@@ -1,13 +1,13 @@
 pipeline {
     agent any
     tools{
-    //     java 'java11'
-    //     maven 'mvn'
-    // }
+        java 'java'
+        maven 'mvn'
+    }
     
-    // environment{
-    //     SCANNER_HOME= tool 'sonarqube'
-    // }
+    environment{
+        SCANNER_HOME= tool 'sonarqube'
+    }
     
     stages {
         stage('Git Chekout') {
