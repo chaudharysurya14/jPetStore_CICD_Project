@@ -1,13 +1,13 @@
 pipeline {
     agent any
     tools{
-        java 'java11'
-        maven 'mvn'
-    }
+    //     java 'java11'
+    //     maven 'mvn'
+    // }
     
-    environment{
-        SCANNER_HOME= tool 'sonarqube'
-    }
+    // environment{
+    //     SCANNER_HOME= tool 'sonarqube'
+    // }
     
     stages {
         stage('Git Chekout') {
@@ -38,15 +38,15 @@ pipeline {
         
         stage('Static Analysis') {
             steps {
-                sh '''$SCANNER_HOME/bin/sonarqube -Dsonar.url=http://15.206.158.238:9000/ -Dsonar.login=sonarqube credential token Dsonar.projectName=JPetStore
+                sh '''$SCANNER_HOME/bin/sonarqube -Dsonar.url=http://192.168.6.131:9000/ -Dsonar.login=sonarqube credential token Dsonar.projectName=JPetStore
                         Dsonar.java.binaries=. \
                         -Dsonar.projectkey=JPetStore '''
             }
         }
-        stage('Generate and build') {
-            steps {
-                sh "mvn clean install"
-            }
-        }
+        // stage('Generate and build') {
+        //     steps {
+        //         sh "mvn clean install"
+        //     }
+        // }
     }
 }
