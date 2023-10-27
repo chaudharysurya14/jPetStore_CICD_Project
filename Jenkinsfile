@@ -7,7 +7,7 @@ pipeline {
   	stages {
   stage ('Check secrets') {
     steps {
-      sh 'trufflehog3 https://github.com/chaudharysurya14/WebGoat_DevSecOps.git -f json -o truffelhog_output.json || true'
+      sh 'trufflehog3 https://github.com/chaudharysurya14/jPetStore_CICD_Project.git -f json -o truffelhog_output.json || true'
           }
     }
       stage('Check Dependency') {
@@ -18,7 +18,7 @@ pipeline {
         }
 	stage ('Static analysis') {
       steps {
-        withSonarQubeEnv('sonarqube') {
+        withSonarQubeEnv('sonar') {
           sh 'mvn sonar:sonar'
         //sh 'sudo python3 Devsecops.py'
 	}
