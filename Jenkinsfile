@@ -12,9 +12,9 @@ pipeline {
     }
       stage('Check Dependency') {
             steps {
-		java -Dlogback.configurationFile=/path/to/config.xml chapters.configuration.MyApp1
                 dependencyCheck additionalArguments: ' --scan ./ ', odcInstallation: 'Owasp-DC'
                 dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+		-Dlogback.configurationFile=/path/to/config.xml chapters.configuration.MyApp1
             }
         }
 	stage ('Static analysis') {
