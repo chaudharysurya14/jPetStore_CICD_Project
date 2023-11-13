@@ -1,9 +1,9 @@
 pipeline {
 	agent any
-	 // tools{
-  //       java 'java'
-        // maven 'mvn'
-    // }
+	 tools{
+        // java 'java'
+        maven 'maven'
+    }
   	stages {
   stage ('Check secrets') {
     steps {
