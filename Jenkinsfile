@@ -2,7 +2,7 @@ pipeline {
 	agent any
 	 tools{
         // java 'java'
-        maven 'maven'
+        maven 'maven3'
     }
   	stages {
   stage ('Check secrets') {
