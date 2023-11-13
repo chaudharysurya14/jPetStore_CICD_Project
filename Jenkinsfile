@@ -12,8 +12,10 @@ pipeline {
     }
       stage('Check Dependency') {
             steps {
-                dependencyCheck additionalArguments: ' --scan ./ ', odcInstallation: 'OWASP Dependency-Check'
+                dependencyCheck additionalArguments: ' --scan ./ ', odcInstallation: 'Owasp-DC'
                 dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+		java -Dlogback.configurationFile=/path/to/config.xml chapters.configuration.MyApp1
+
             }
         }
 	stage ('Static analysis') {
