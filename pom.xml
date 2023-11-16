@@ -22,7 +22,7 @@
   <parent>
     <groupId>org.mybatis</groupId>
     <artifactId>mybatis-parent</artifactId>
-    <version>37</version>
+    <version>40</version>
     <relativePath />
   </parent>
 
@@ -36,7 +36,7 @@
 
   <scm>
     <url>http://github.com/mybatis/jpetstore-6</url>
-    <connection>scm:git:ssh://github.com/mybatis/jpetstore-6.git</connection>
+    <connection>scm:git:ssh://git@github.com/mybatis/jpetstore-6.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/mybatis/jpetstore-6.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
@@ -50,9 +50,9 @@
   </ciManagement>
   <distributionManagement>
     <site>
-      <id>gh-pages</id>
+      <id>gh-pages-scm</id>
       <name>Mybatis GitHub Pages</name>
-      <url>git:ssh://git@github.com/mybatis/jpetstore-6.git?gh-pages#</url>
+      <url>scm:git:ssh://git@github.com/mybatis/jpetstore-6.git</url>
     </site>
   </distributionManagement>
 
@@ -61,7 +61,7 @@
     <dependency>
       <groupId>org.mybatis</groupId>
       <artifactId>mybatis</artifactId>
-      <version>3.5.13</version>
+      <version>3.5.14</version>
     </dependency>
     <dependency>
       <groupId>org.mybatis</groupId>
@@ -123,12 +123,12 @@
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>2.0.7</version>
+      <version>2.0.9</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
-      <version>2.0.7</version>
+      <version>2.0.9</version>
     </dependency>
     <dependency>
       <groupId>org.hsqldb</groupId>
@@ -141,7 +141,7 @@
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
-      <version>5.9.3</version>
+      <version>5.10.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -165,13 +165,13 @@
     <dependency>
       <groupId>com.codeborne</groupId>
       <artifactId>selenide</artifactId>
-      <version>6.14.1</version>
+      <version>7.0.2</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>htmlunit-driver</artifactId>
-      <version>4.9.1</version>
+      <version>4.13.0</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
@@ -195,7 +195,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
-          <version>3.3.2</version>
+          <version>3.4.0</version>
           <configuration>
             <archive>
               <manifestEntries>
@@ -206,7 +206,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-failsafe-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.2.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -307,13 +307,13 @@
     <tomcat.version />
 
     <surefire.version>3.0.0-M7</surefire.version>
-    <cargo-maven3-plugin.version>1.10.7</cargo-maven3-plugin.version>
+    <cargo-maven3-plugin.version>1.10.10</cargo-maven3-plugin.version>
     <clirr.comparisonVersion>6.0.2</clirr.comparisonVersion>
 
-    <spring.version>5.3.27</spring.version>
+    <spring.version>5.3.30</spring.version>
     <assertj.version>3.24.2</assertj.version>
-    <mockito.version>5.3.1</mockito.version>
-    <hsqldb.version>2.7.1</hsqldb.version>
+    <mockito.version>5.7.0</mockito.version>
+    <hsqldb.version>2.7.2</hsqldb.version>
     <module.name>org.mybatis.jpetstore</module.name>
 
     <!-- Reproducible Builds -->
